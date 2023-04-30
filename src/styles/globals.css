@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-bg-main: #4e4e4e;
+  --color-text-main: #e5e5e5;
+  --color-text-selected: #3d3d3d;
+  --color-border-selected: #3d3d3d70;
+  --color-box-shadow: #2d2d2d;
+  --color-box-shadow-light: #2d2d2d80;
+}
 * {
   box-sizing: border-box;
   padding: 0;

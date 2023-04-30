@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import classNames from "classnames";
+// import styles from
+import Card from "@/components/Card";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,26 +46,15 @@ export async function getStaticProps() {
 }
 
 export default function Home({ pokemons }: pokemonProps) {
-  console.log("teste", pokemons);
   return (
     <div className="h-full">
-      <h1>PokeNext</h1>
-      <ul>
-        {pokemons.map(({ id, name, url }) => {
-          return (
-            <li key={id}>
-              <Image src={url} width={300} height={300} alt={name} />
-              <div>
-                <label>
-                  Nome do Pokemon: <span>{name}</span>
-                </label>
-                <label>
-                  Id: <span>{id}</span>
-                </label>
-              </div>
-            </li>
-          );
-        })}
+      <main>
+        <h1>PokeNext</h1>
+      </main>
+      <ul className="grid grid-cols-4 gap-4 justify-center items-center">
+        {pokemons.map(({ id, name, url }) => (
+          <Card key={id} id={id} name={name} url={url} />
+        ))}
       </ul>
     </div>
   );

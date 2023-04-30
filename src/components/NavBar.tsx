@@ -37,12 +37,16 @@ export default function NavBar() {
         <div className={classNames(styles.menu, "my-auto")}>
           <ul className="inline-flex gap-10  m-auto">
             <li
-              className={"font-bold uppercase text-xl text-slate-200 px-5 py-3"}
+              className={
+                "font-bold rounded-sm uppercase text-xl text-slate-200 px-5 py-3"
+              }
             >
               <Link href={"/"}>Home</Link>
             </li>
             <li
-              className={"font-bold text-xl uppercase text-slate-200 px-5 py-3"}
+              className={
+                "font-bold rounded-sm text-xl uppercase text-slate-200 px-5 py-3"
+              }
             >
               <Link href={"/about"}>Sobre</Link>
             </li>
