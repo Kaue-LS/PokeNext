@@ -8,7 +8,7 @@ export default function NavBar() {
       className={classNames(
         styles.headerMain,
         styles.vars,
-        "px-5 py-5 pr-20 border-b-8 border-red-600 shadow-xl"
+        "px-5 py-5 pr-20 border-b-8 border-neutral-800 shadow-xl"
       )}
     >
       <nav className="flex justify-between">
@@ -38,14 +38,14 @@ export default function NavBar() {
           <ul className="inline-flex gap-10  m-auto">
             <li
               className={
-                "font-bold rounded-sm uppercase text-xl text-slate-200 px-5 py-3"
+                "font-bold border-2 flex items-center uppercase text-sm text-black-600 justify-center "
               }
             >
               <Link href={"/"}>Home</Link>
             </li>
             <li
               className={
-                "font-bold rounded-sm text-xl uppercase text-slate-200 px-5 py-3"
+                "font-bold border-2 flex items-center text-sm uppercase text-black-600 justify-center "
               }
             >
               <Link href={"/about"}>Sobre</Link>

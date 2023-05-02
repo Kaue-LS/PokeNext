@@ -1,8 +1,9 @@
+import Layout from "@/components/Layout";
 import Image from "next/image";
 
 export default function About() {
   return (
-    <div>
+    <Layout pageName={"Sobre"}>
       <h1>Sobre o projeto: </h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum tempore
@@ -15,6 +16,6 @@ export default function About() {
         height={300}
         alt="Charizard"
       />
-    </div>
+    </Layout>
   );
 }

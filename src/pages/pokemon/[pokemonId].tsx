@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout";
 import { GetStaticPropsContext } from "next";
 import Image from "next/image";
 
@@ -76,9 +77,8 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
 };
 
 export default function Pokemon({ pokemon }: PokemonProps) {
-  console.log(pokemon.url);
   return (
-    <main>
+    <Layout pageName={pokemon.name}>
       <h1>{pokemon.name}</h1>
       <Image src={pokemon.url} width={200} height={200} alt={pokemon.name} />
       <div>
@@ -97,6 +97,6 @@ export default function Pokemon({ pokemon }: PokemonProps) {
         <h3>Peso</h3>
         <p>{pokemon.weight / 10} Kg</p>
       </div>
-    </main>
+    </Layout>
   );
 }

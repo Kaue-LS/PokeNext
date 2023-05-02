@@ -7,14 +7,18 @@
   background-color: var(--color-bg-main);
 }
 .menu > ul > li {
-  border: 3px solid var(--color-text-main);
+  background: var(--color-bg-button-3);
   transition: 400ms;
+  width: 100%;
+  min-width: 60px;
+  max-width: 60px;
+  min-height: 60px;
+  max-height: 60px;
+  border-color: var(--color-text-selected);
+  border-radius: 100%;
+  box-shadow: 0px 0px 10px inset var(--color-text-selected);
 }
 .menu > ul > li:hover {
-  background-color: var(--color-text-main);
-  color: var(--color-text-selected);
-  box-shadow: 0px 0px 10px var(--color-box-shadow);
-  border-bottom: 3px solid var(--color-border-selected);
-  border-right: 3px solid var(--color-border-selected);
-  border-left: 3px solid var(--color-border-selected);
+  cursor: pointer;
+  box-shadow: 0px 0px 10px inset #ffffff60;
 }

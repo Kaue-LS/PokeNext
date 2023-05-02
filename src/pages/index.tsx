@@ -1,11 +1,7 @@
 import React from "react";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import classNames from "classnames";
-// import styles from
 import Card from "@/components/Card";
-
-const inter = Inter({ subsets: ["latin"] });
+import Layout from "@/components/Layout";
+import Image from "next/image";
 
 interface pokemonDataProps {
   id: number;
@@ -47,15 +43,22 @@ export async function getStaticProps() {
 
 export default function Home({ pokemons }: pokemonProps) {
   return (
-    <div className="h-full">
-      <main>
-        <h1>PokeNext</h1>
-      </main>
-      <ul className="grid grid-cols-4 gap-4 justify-center items-center">
-        {pokemons.map(({ id, name, url }) => (
-          <Card key={id} id={id} name={name} url={url} />
-        ))}
-      </ul>
-    </div>
+    <Layout home>
+      <div className="h-full">
+        <section>
+          <Image
+            src={"/images/PokeNext.png"}
+            alt="PokeNext"
+            width={400}
+            height={400}
+          />
+        </section>
+        <ul className="grid grid-cols-4 gap-4 justify-center items-center">
+          {pokemons.map(({ id, name, url }) => (
+            <Card key={id} id={id} name={name} url={url} />
+          ))}
+        </ul>
+      </div>
+    </Layout>
   );
 }

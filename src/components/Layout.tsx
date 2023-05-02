@@ -5,14 +5,27 @@ import { ReactNode } from "react";
 
 interface Layout {
   children: ReactNode;
+  home?: boolean;
+  pageName?: string;
 }
 
-export default function Layout({ children }: Layout) {
+export default function Layout({ pageName, home, children }: Layout) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="/images/favicon.icon"></link>
-        <title>PokeNext</title>
+        <meta />
+        <meta charSet="UTF-8" name="description" content="PokeNext" />
+        <link rel="shortcut icon" href="/images/favicon.ico"></link>
+        {home ? (
+          <title>PokeNext</title>
+        ) : (
+          <title>
+            PokeNext-
+            {pageName
+              ? pageName?.charAt(0)?.toUpperCase() + pageName?.slice(1)
+              : ""}
+          </title>
+        )}
       </Head>
       <NavBar />
       <main>{children}</main>
