@@ -2,7 +2,8 @@ import React from "react";
 import Card from "@/components/Card";
 import Layout from "@/components/Layout";
 import Image from "next/image";
-
+import classNames from "classnames";
+import styles from "../styles/home.module.css";
 interface pokemonDataProps {
   id: number;
   name: string;
@@ -45,15 +46,39 @@ export default function Home({ pokemons }: pokemonProps) {
   return (
     <Layout home>
       <div className="h-full">
-        <section>
-          <Image
-            src={"/images/PokeNext.png"}
-            alt="PokeNext"
-            width={400}
-            height={400}
-          />
+        <section
+          className={classNames(
+            "py-10 px-5 sm:px-10 lg:px-20 text-center flex flex-col gap-y-4 justify-center "
+          )}
+        >
+          <div className="relative">
+            <Image
+              className={classNames(
+                styles.homeLogo,
+                "m-auto object-cover w-full h-full max-w-xl"
+              )}
+              src={"/images/PokeNext.png"}
+              alt="PokeNext"
+              fill
+              priority
+            />
+          </div>
+          <p>
+            A <b>PokeNext</b> se trata de um site feito em <b>Next.js</b> com o
+            objetivo de treino, utilizando a Api pública de Pokemon. Com intuito
+            de treinamento, aprendendo pontos importantes a respeito do
+            Framework, e de como utiliza-los, além de tambem treinar a
+            biblioteca de estilização, a <b>Tailwind CSS</b>. O projeto em si,
+            como o objetivo era aprendizado, esta feito de uma forma basica para
+            explicar e entender as principais ferramentas Next.js junto com o
+            uso da API.
+          </p>
         </section>
-        <ul className="grid grid-cols-4 gap-4 justify-center items-center">
+        <ul
+          className={classNames(
+            "grid sm:grid-cols-2 min-[280px]:grid-cols-1 lg:grid-cols-4 md:grid-cols-3  gap-10 justify-center items-center px-5"
+          )}
+        >
           {pokemons.map(({ id, name, url }) => (
             <Card key={id} id={id} name={name} url={url} />
           ))}

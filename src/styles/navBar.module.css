@@ -6,6 +6,10 @@
 .headerMain {
   background-color: var(--color-bg-main);
 }
+
+.logoContent > div > img {
+  position: relative !important;
+}
 .menu > ul > li {
   background: var(--color-bg-button-3);
   transition: 400ms;
@@ -18,7 +22,37 @@
   border-radius: 100%;
   box-shadow: 0px 0px 10px inset var(--color-text-selected);
 }
-.menu > ul > li:hover {
+
+.menuIcon {
+  background: var(--color-bg-button-3);
+  border-radius: 100%;
+  border-color: var(--color-text-selected);
+  border-radius: 100%;
+  padding: 10px;
+  border-width: 3px;
+  max-width: 50px;
+  box-shadow: 0px 0px 10px inset var(--color-text-selected);
+}
+
+.menu > ul > li:hover,
+.menuIcon:hover {
   cursor: pointer;
   box-shadow: 0px 0px 10px inset #ffffff60;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu > ul {
+    width: 100%;
+    min-width: 120px;
+    max-width: 120px;
+  }
+  .menu > ul > li {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 10px 0;
+    min-height: 100%;
+    max-height: 100%;
+    border-radius: 0%;
+  }
 }

@@ -17,7 +17,7 @@ export default function Card({ name, url, id }: pokemonDataProps) {
         "z-10 relative  bg-red-600"
       )}
     >
-      <div className=" flex flex-col w-full  p-2 shadow-2xl">
+      <div className=" flex flex-col w-full bg-blue-600  p-2 shadow-2xl">
         <label
           className={classNames(
             styles.name,
