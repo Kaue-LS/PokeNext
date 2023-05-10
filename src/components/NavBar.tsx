@@ -33,7 +33,7 @@ export default function NavBar() {
           <h1
             className={classNames(
               styles.title,
-              "tracking-wide text-4xl sm:text-5xl font-bold italic"
+              "tracking-wide text-3xl sm:text-5xl font-bold italic"
             )}
           >
             PokeNext

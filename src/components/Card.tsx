@@ -45,19 +45,18 @@ export default function Card({ name, url, id }: pokemonDataProps) {
             "text-lg font-bold",
             " border-orange-400  text-center",
             "rounded-xl bg-slate-100",
-            "text-black",
-            "border-4 relative"
+            "text-black flex flex-row",
+            "border-4 relative w-full"
           )}
           href={`pokemon/${id}`}
         >
           <Image
-            className={classNames(styles.icon, "absolute")}
+            className={classNames(styles.icon, "aboslute")}
             src={"/images/pokeball.png"}
             alt=""
-            width={20}
-            height={20}
+            fill
           />
-          Detalhes
+          <span className="ml-auto mr-auto">Detalhes</span>
         </Link>
       </div>
     </li>

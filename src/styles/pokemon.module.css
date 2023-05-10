@@ -1,0 +1,12 @@
+.container {
+  box-shadow: 0px 0px 20px var(--color-box-shadow);
+}
+.pokemonImage > img {
+  position: relative !important;
+  min-width: 200px;
+  max-width: 300px;
+  object-fit: contain;
+}
+.pokemonImage {
+  box-shadow: 0px 0px 10px inset var(--color-box-shadow);
+}

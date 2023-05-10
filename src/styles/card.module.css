@@ -17,12 +17,13 @@
   color: var(--color-text-main);
 }
 .card .details {
-  border-left-width: 30px;
+  border-left-width: 40px;
 }
 .card .details .icon {
-  left: -25px;
-  top: auto;
-  bottom: 5px;
+  max-width: max-content;
+  object-fit: contain;
+  max-height: 100%;
+  margin: auto 0 auto -35px;
 }
 .card .details:hover {
   border-color: var(--color-bg-button-2);
